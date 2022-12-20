@@ -1,0 +1,102 @@
+body {
+  overflow-y: hidden;
+  background-color: #ececec;
+}
+
+nav {
+  width: 100%;
+  height: 168px;
+  background-color: #c5d4e9;
+  display: flex;
+  align-items: center;
+}
+nav .navBox {
+  padding: 0 50px;
+  display: flex;
+}
+nav .navBox i {
+  font-size: 60px;
+  color: #4f7fc5;
+  cursor: pointer;
+}
+nav .navBox .circleBox {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+}
+nav .navBox .circleBox .nav-circle {
+  width: 60px;
+  height: 60px;
+  background-color: white;
+  border-radius: 30px;
+  margin-right: 50px;
+}
+
+.main {
+  position: relative;
+  right: 280px;
+  display: flex;
+}
+.main .sideBar {
+  width: 280px;
+  height: 82vh;
+  background-color: #e4e8ed;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.main .sideBar .sideBar-contents {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  cursor: pointer;
+}
+.main .sideBar .sideBar-contents h1 {
+  font-size: 35px;
+  margin-left: 20px;
+}
+.main .container {
+  padding: 30px 0 0 30px;
+  display: flex;
+  flex-direction: column;
+}
+.main .container .top {
+  display: flex;
+}
+.main .container .top .container-notice {
+  margin-left: 20px;
+  font-weight: 100;
+  font-size: 40px;
+}
+.main .container .top .items {
+  display: flex;
+  position: relative;
+  left: 1270px;
+  top: 40px;
+}
+.main .container .top .items div {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: white;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  cursor: pointer;
+  color: black;
+}
+.main .container .contents {
+  width: 1500px;
+  height: 500px;
+  border-radius: 20px;
+  background-color: #e0e4e8;
+}
+
+a {
+  text-decoration: none;
+}/*# sourceMappingURL=main.css.map */

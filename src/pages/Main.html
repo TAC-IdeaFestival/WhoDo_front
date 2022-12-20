@@ -5,12 +5,59 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/main.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
         <link
             rel="shortcut icon"
             type="image/x-icon"
             href="../imgs/Who_Do-Logo.ico"
         />
         <title>main</title>
+        <script
+            src="https://kit.fontawesome.com/0d3908869d.js"
+            crossorigin="anonymous"
+        ></script>
+        <script defer src="../scripts/move.js"></script>
     </head>
-    <body></body>
+    <body>
+        <nav>
+            <div class="navBox">
+                <i class="fa-solid fa-bars target"></i>
+                <div class="circleBox">
+                    <div class="nav-circle"></div>
+                    <div class="nav-circle"></div>
+                    <div class="nav-circle"></div>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="sideBar">
+                <div class="sideBar-contents">
+                    <img src="../imgs/UserIMG.png" alt="" />
+                    <h1>내 정보</h1>
+                </div>
+                <div class="sideBar-contents">
+                    <img src="../imgs/SpeakerIMG.png" alt="" />
+                    <h1>공지</h1>
+                </div>
+                <div class="sideBar-contents"></div>
+            </div>
+            <div class="container">
+                <div class="top">
+                    <h1 class="container-notice">공지</h1>
+                    <div class="items">
+                        <a href="./AddForm.html">
+                            <div class="addBTN">
+                                <i class="fa-solid fa-plus"></i>
+                            </div>
+                        </a>
+                        <div class="modifyBTN">
+                            <i class="fa-solid fa-pen"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents"></div>
+            </div>
+        </div>
+    </body>
 </html>
