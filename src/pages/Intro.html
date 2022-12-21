@@ -31,11 +31,15 @@
             </p>
             <div class="container-imgBox">
                 <div></div>
-                <a href="./SignIn.html">
-                    <button class="start">시작하기</button>
-                </a>
+                <button class="start">시작하기</button>
                 <div></div>
             </div>
         </div>
     </body>
+    <script>
+        const startBTN = document.querySelector('.start');
+        startBTN.addEventListener('click', () => {
+            location.href = './SignIn.html';
+        });
+    </script>
 </html>
