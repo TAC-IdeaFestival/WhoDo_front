@@ -4,6 +4,8 @@ const submitBTN = document.querySelector('.submitBTN');
 
 const check = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,30}$/;
 
+let userId;
+
 const handleClick = () => {
     const id = idInput.value;
     const pw = pwInput.value;
@@ -26,6 +28,7 @@ const handleClick = () => {
                 })
                 .then((json) => {
                     console.log(json);
+                    userId = id;
                 })
                 .catch((err) => {
                     console.log(err);
@@ -46,4 +49,10 @@ const checkPW = (pw) => {
     return true;
 };
 
+const postId = () => {
+    return userId;
+};
+
 submitBTN.addEventListener('click', handleClick);
+
+export default postId;

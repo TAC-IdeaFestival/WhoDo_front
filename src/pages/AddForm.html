@@ -18,6 +18,7 @@
         ></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
         <script defer src="../scripts/move.js"></script>
+        <script src="../scripts/write.js" defer></script>
         <title>AddForm</title>
     </head>
     <body>
@@ -45,7 +46,7 @@
             </div>
             <div class="container">
                 <div class="top">
-                    <div class="grade">대상학년 :</div>
+                    <div class="grade showGrade">대상학년 :</div>
                     <input
                         type="text"
                         class="titleInput"
@@ -60,9 +61,10 @@
                                 <p class="subtitle">대상학년을 선택하세요</p>
                             </div>
                             <div class="gradeBox">
-                                <div class="grade grade1">1학년</div>
-                                <div class="grade grade2">2학년</div>
-                                <div class="grade grade3">3학년</div>
+                                <div class="grade grade1 grades">1학년</div>
+                                <div class="grade grade2 grades">2학년</div>
+                                <div class="grade grade3 grades">3학년</div>
+                                <div class="grade grade4 grades">초기화</div>
                             </div>
                         </div>
                         <div class="deadline">

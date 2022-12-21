@@ -3,7 +3,7 @@
         display: flex;
     }
     .top {
-        background-color: #ddeed4;
+        background-color: white;
         border-radius: 20px;
         position: relative;
         top: 25px;
@@ -30,7 +30,7 @@
             align-items: center;
             display: flex;
             border-radius: 20px;
-            background-color: #e4efdf;
+            background-color: #f8f8f8;
             outline: none;
             border: 0;
             font-size: 30px;
@@ -64,7 +64,7 @@
             .gradeBox {
                 display: flex;
                 margin-right: 70px;
-                width: 700px;
+                width: 850px;
                 justify-content: space-around;
                 .grade {
                     width: 190px;
@@ -78,7 +78,7 @@
                     cursor: pointer;
                 }
                 .grade:hover {
-                    scale: 1.1;
+                    scale: 0.9;
                     transition: ease-in-out 0.1s;
                 }
                 .grade1 {
@@ -154,6 +154,10 @@
         position: relative;
         left: 1300px;
         cursor: pointer;
+    }
+    .container-submitBTN:hover {
+        box-shadow: 5px 5px 3px #666;
+        transition: ease-in-out 0.2s;
     }
 }
 
