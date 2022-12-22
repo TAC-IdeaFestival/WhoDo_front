@@ -1,4 +1,4 @@
-const idInput = document.querySelector('.id');
+const emailInput = document.querySelector('.email');
 const pwInput = document.querySelector('.pw');
 const pwCheckInput = document.querySelector('.pwCheck');
 const nameInput = document.querySelector('.name');
@@ -6,48 +6,60 @@ const numberInput = document.querySelector('.number');
 const submitBTN = document.querySelector('.submitBTN');
 
 const check = /^(?=.*[a-zA-Z])(?=.*[0-9]).{8,30}$/;
+const emailCheck =
+    /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
 
 const handleClick = () => {
-    const id = idInput.value;
-    const pw = pwInput.value;
-    const pwCheck = pwCheckInput.value;
-    const name = nameInput.value;
-    const number = numberInput.value;
-    if (id != '' && pw != '' && pwCheck != '' && name != '' && number != '') {
-        if (checkPW(pw)) {
-            if (pw != pwCheck) alert('비밀번호가 일치하지 않습니다');
-            else {
-                if (number.length != 4) alert('학번을 확인해주세요');
-                // 완전히 통과
+    try {
+        const email = emailInput.value;
+        const pw = pwInput.value;
+        const pwCheck = pwCheckInput.value;
+        const name = nameInput.value;
+        const number = numberInput.value;
+        if (
+            email != '' &&
+            pw != '' &&
+            pwCheck != '' &&
+            name != '' &&
+            number != ''
+        ) {
+            if (checkPW(pw) && checkEmail(email)) {
+                if (pw != pwCheck) alert('비밀번호가 일치하지 않습니다');
                 else {
-                    let url =
-                        'https://server.the-moment-schema.site/signupInfo';
-                    fetch(url, {
-                        method: 'post',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({
-                            id: id,
-                            pw: pw,
-                            name: name,
-                            number: number,
-                        }),
-                    })
-                        .then((res) => {
-                            return res.json();
+                    if (number.length != 4) alert('학번을 확인해주세요');
+                    // 완전히 통과
+                    else {
+                        let url =
+                            'https://server.the-moment-schema.site/signupInfo';
+                        fetch(url, {
+                            method: 'post',
+                            headers: {
+                                'Content-Type': 'application/json',
+                            },
+                            body: JSON.stringify({
+                                email: email,
+                                pw: pw,
+                                name: name,
+                                number: number,
+                            }),
                         })
-                        .then((json) => {
-                            console.log(json);
-                        })
-                        .catch((err) => {
-                            console.log(err);
-                        });
+                            .then((res) => {
+                                return res.json();
+                            })
+                            .then((json) => {
+                                console.log(json);
+                            })
+                            .catch((err) => {
+                                console.log(err);
+                            });
+                    }
                 }
             }
+        } else {
+            alert('잘못 입력된 값이 있습니다');
         }
-    } else {
-        alert('잘못 입력된 값이 있습니다');
+    } catch (e) {
+        console.log(e);
     }
 };
 
@@ -62,5 +74,14 @@ const checkPW = (pw) => {
     }
     return true;
 };
+const checkEmail = (email) => {
+    if (!emailCheck.test(email)) {
+        alert('올바른 형식의 이메일을 적어주세요');
+        return false;
+    }
+    return true;
+};
 
 submitBTN.addEventListener('click', handleClick);
+
+export { checkPW, checkEmail };
