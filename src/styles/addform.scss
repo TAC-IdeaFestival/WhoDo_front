@@ -1,6 +1,27 @@
 .container {
     .box {
         display: flex;
+        .secondBox {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            padding: 20px 0;
+            .voteBox {
+                color: #b8b8b8;
+                display: flex;
+                width: 500px;
+                height: 100px;
+                align-items: center;
+                justify-content: center;
+                background-color: #d9d9d9;
+                font-size: 30px;
+                border-radius: 20px;
+                text-align: center;
+                border: 0;
+                outline: none;
+                font-weight: bolder;
+            }
+        }
     }
     .top {
         background-color: white;
