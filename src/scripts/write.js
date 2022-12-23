@@ -28,7 +28,7 @@ const handleClick = () => {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    id: id,
+                    email: email,
                     pw: pw,
                 }),
             })
