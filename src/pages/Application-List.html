@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>list-Teacher</title>
+    <link rel="stylesheet" href="../styles/main.css"/>
+    <link rel="stylesheet" href="../styles/global.css"/>
+    <link rel="stylesheet" href="../styles/list.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script
+            src="https://kit.fontawesome.com/0d3908869d.js"
+            crossorigin="anonymous"
+        ></script>
+    <script defer src="../scripts/move.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="navBox">
+            <i class="fa-solid fa-bars target"></i>
+            <div class="circleBox">
+                <div class="nav-circle"></div>
+                <div class="nav-circle"></div>
+                <div class="nav-circle"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="sideBar">
+            <div class="sideBar-contents">
+                <img src="../imgs/UserIMG.png" alt="" />
+                <h1>내 정보</h1>
+            </div>
+            <div class="sideBar-contents">
+                <img src="../imgs/SpeakerIMG.png" alt="" />
+                <h1>공지</h1>
+            </div>
+            <div class="sideBar-contents"></div>
+        </div>
+        
+        <div class = "container">
+            <div class="top">
+                <h1 class = "Application-List">신청목록</h1>
+                <div class="Box-Search"><span>이름 또는 학번을 입력 해 주세요.</span></div>
+            </div> 
+            <div class="Box-container">
+                <div class="left-Box">
+                    <div class="want">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8968/8968523.png" alt="" />
+                        <span>희망</span>
+                    </div>
+                    <div class = "Box-grade">
+                        <div class="grade"><span>1학년</span></div>
+                        <div class="grade"><span>2학년</span></div>
+                        <div class="grade"><span>3학년</span></div>
+                    </div>
+                    
+                </div>  
+                <div class="right-Box">
+                    <div class="Nwant">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8370/8370734.png " alt="">
+                        <span>비희망</span>
+                    </div>
+                    <div class = "Box-grade">
+                        <div class="grade"><span>1학년</span></div>
+                        <div class="grade"><span>2학년</span></div>
+                        <div class="grade"><span>3학년</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
