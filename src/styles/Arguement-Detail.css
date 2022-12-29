@@ -19,3 +19,10 @@
     background-color: #edeeef;
     width: 500px;
 }
+.btnBOX {
+    width: 500px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    right: 250px;
+}
