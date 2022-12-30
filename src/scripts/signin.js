@@ -12,7 +12,8 @@ const handleClick = () => {
 
     if (email != '' && pw != '') {
         if (checkPW(pw) && checkEmail(email)) {
-            let url = 'https://server.the-moment-schema.site/signupInfo';
+            let url =
+                'https://port-0-new-back-fao2flc73lma0.gksl2.cloudtype.app/signin';
             fetch(url, {
                 method: 'post',
                 headers: {

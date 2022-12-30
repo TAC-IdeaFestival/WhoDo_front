@@ -30,7 +30,7 @@ const handleClick = () => {
                     // 완전히 통과
                     else {
                         let url =
-                            'https://server.the-moment-schema.site/signupInfo';
+                            'https://ec2-3-34-142-235.ap-northeast-2.compute.amazonaws.com/auth/signup';
                         fetch(url, {
                             method: 'post',
                             headers: {
@@ -38,9 +38,9 @@ const handleClick = () => {
                             },
                             body: JSON.stringify({
                                 email: email,
-                                pw: pw,
+                                password: pw,
                                 name: name,
-                                number: number,
+                                classNum: number,
                             }),
                         })
                             .then((res) => {
