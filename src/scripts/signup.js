@@ -29,29 +29,34 @@ const handleClick = () => {
                     if (number.length != 4) alert('학번을 확인해주세요');
                     // 완전히 통과
                     else {
-                        let url =
-                            'https://ec2-3-34-142-235.ap-northeast-2.compute.amazonaws.com/auth/signup';
-                        fetch(url, {
-                            method: 'post',
-                            headers: {
-                                'Content-Type': 'application/json',
-                            },
-                            body: JSON.stringify({
-                                email: email,
-                                password: pw,
-                                name: name,
-                                classNum: number,
-                            }),
-                        })
-                            .then((res) => {
-                                return res.json();
-                            })
-                            .then((json) => {
-                                console.log(json);
-                            })
-                            .catch((err) => {
-                                console.log(err);
-                            });
+                        localStorage.setItem('email', email);
+                        localStorage.setItem('pw', pw);
+                        localStorage.setItem('name', name);
+                        localStorage.setItem('number', number);
+                        location.href = '../pages/Main.html';
+                        // let url =
+                        //     'https://ec2-3-34-142-235.ap-northeast-2.compute.amazonaws.com/auth/signup';
+                        // fetch(url, {
+                        //     method: 'post',
+                        //     headers: {
+                        //         'Content-Type': 'application/json',
+                        //     },
+                        //     body: JSON.stringify({
+                        //         email: email,
+                        //         password: pw,
+                        //         name: name,
+                        //         classNum: number,
+                        //     }),
+                        // })
+                        //     .then((res) => {
+                        //         return res.json();
+                        //     })
+                        //     .then((json) => {
+                        //         console.log(json);
+                        //     })
+                        //     .catch((err) => {
+                        //         console.log(err);
+                        //     });
                     }
                 }
             }
