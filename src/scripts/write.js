@@ -21,27 +21,32 @@ const handleClick = () => {
             DDInput.value.length == 2
         ) {
             // 백엔드로 보내는 코드 들어갈 자리
-            let url = 'https://server.the-moment-schema.site/signupInfo';
-            fetch(url, {
-                method: 'post',
-                headers: {
-                    'Content-Type': 'application/json',
-                    Authorization: localStorage.getItem('access_token'),
-                },
-                body: JSON.stringify({
-                    email: email,
-                    pw: pw,
-                }),
-            })
-                .then((res) => {
-                    return res.json();
-                })
-                .then((json) => {
-                    console.log(json);
-                })
-                .catch((err) => {
-                    console.log(err);
-                });
+            localStorage.setItem('gradeValue', gradeValue);
+            localStorage.setItem('title', title);
+            localStorage.setItem('matters', matters);
+            localStorage.setItem('YMD', YMD);
+            location.href = '../pages/Main.html';
+            // let url = 'https://server.the-moment-schema.site/signupInfo';
+            // fetch(url, {
+            //     method: 'post',
+            //     headers: {
+            //         'Content-Type': 'application/json',
+            //         Authorization: localStorage.getItem('access_token'),
+            //     },
+            //     body: JSON.stringify({
+            //         email: email,
+            //         pw: pw,
+            //     }),
+            // })
+            //     .then((res) => {
+            //         return res.json();
+            //     })
+            //     .then((json) => {
+            //         console.log(json);
+            //     })
+            //     .catch((err) => {
+            //         console.log(err);
+            //     });
         } else alert('마감일이 잘못 입력되었습니다');
     } else alert('입력되지 않은 칸이 있습니다');
 };
