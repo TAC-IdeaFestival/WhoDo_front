@@ -5,7 +5,91 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../styles/global.css" />
-        <title>ContentDetail</title>
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/Arguement-Detail.css" />
+        <link rel="stylesheet" href="../styles/addform.css" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="../imgs/Who_Do-Logo.ico"
+        />
+        <script
+            src="https://kit.fontawesome.com/0d3908869d.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+        <script defer src="../scripts/move.js"></script>
+        <script defer src="../scripts/detail.js"></script>
+        <title>contentdetail</title>
     </head>
-    <body></body>
+    <body>
+        <nav>
+            <div class="navBox">
+                <i class="fa-solid fa-bars target"></i>
+                <div class="circleBox">
+                    <div class="nav-circle"></div>
+                    <div class="nav-circle"></div>
+                    <div class="nav-circle"></div>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="sideBar">
+                <div class="sideBar-contents">
+                    <a href="./MyPage.html">
+                        <img src="../imgs/UserIMG.png" alt="" />
+                        <h1>내 정보</h1>
+                    </a>
+                </div>
+                <div class="sideBar-contents">
+                    <a href="./Main.html">
+                        <img src="../imgs/SpeakerIMG.png" alt="" />
+                        <h1>공지</h1>
+                    </a>
+                </div>
+                <div class="sideBar-contents">
+                    <a href="./Arguement.html">
+                        <img src="../imgs/SpeakerIMG.png" alt="" />
+                        <h1>논쟁</h1>
+                    </a>
+                </div>
+                <div class="sideBar-contents">
+                    <a href="./Suggstion.html">
+                        <img src="../imgs/Suggestion.png" alt="" />
+                        <h1>건의사항</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="top">
+                    <div
+                        class="grade showGrade"
+                        style="
+                            background-color: gray;
+                            font-size: 35px;
+                            border-radius: 7px;
+                        "
+                    ></div>
+                    <h1 class="arguement-title"></h1>
+                </div>
+                <div class="contents" style="text-align: left"><h2></h2></div>
+                <div class="btnBOX">
+                    <div
+                        class="yes container-submitBTN"
+                        style="background-color: #cce8ca"
+                        id="origin"
+                    >
+                        희망
+                    </div>
+                    <div
+                        class="no container-submitBTN"
+                        style="background-color: #fce1e1"
+                        id="origin"
+                    >
+                        미희망
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

@@ -5,7 +5,121 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../styles/global.css" />
+        <link rel="stylesheet" href="../styles/main.css" />
+        <link rel="stylesheet" href="../styles/addform.css" />
+        <link
+            rel="shortcut icon"
+            type="image/x-icon"
+            href="../imgs/Who_Do-Logo.ico"
+        />
+        <script
+            src="https://kit.fontawesome.com/0d3908869d.js"
+            crossorigin="anonymous"
+        ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+        <script defer src="../scripts/move.js"></script>
+        <script src="../scripts/write.js" defer></script>
         <title>AddForm</title>
     </head>
-    <body></body>
+    <body>
+        <nav>
+            <div class="navBox">
+                <i class="fa-solid fa-bars target"></i>
+                <div class="circleBox">
+                    <div class="nav-circle"></div>
+                    <div class="nav-circle"></div>
+                    <div class="nav-circle"></div>
+                </div>
+            </div>
+        </nav>
+        <div class="main">
+            <div class="sideBar">
+                <div class="sideBar-contents">
+                    <a href="./MyPage.html">
+                        <img src="../imgs/UserIMG.png" alt="" />
+                        <h1>내 정보</h1>
+                    </a>
+                </div>
+                <div class="sideBar-contents">
+                    <a href="./Main.html">
+                        <img src="../imgs/SpeakerIMG.png" alt="" />
+                        <h1>공지</h1>
+                    </a>
+                </div>
+                <div class="sideBar-contents">
+                    <a href="./Arguement.html">
+                        <img src="../imgs/SpeakerIMG.png" alt="" />
+                        <h1>논쟁</h1>
+                    </a>
+                </div>
+                <div class="sideBar-contents">
+                    <a href="./Suggstion.html">
+                        <img src="../imgs/Suggestion.png" alt="" />
+                        <h1>건의사항</h1>
+                    </a>
+                </div>
+            </div>
+            <div class="container">
+                <div class="top">
+                    <div class="grade showGrade">대상학년 :</div>
+                    <input
+                        type="text"
+                        class="titleInput"
+                        placeholder="제목을 작성해주세요"
+                    />
+                </div>
+                <div class="contents">
+                    <div class="box">
+                        <div class="selectGrade">
+                            <div class="heads">
+                                <p>●</p>
+                                <p class="subtitle">대상학년을 선택하세요</p>
+                            </div>
+                            <div class="gradeBox">
+                                <div class="grade grade1 grades">1학년</div>
+                                <div class="grade grade2 grades">2학년</div>
+                                <div class="grade grade3 grades">3학년</div>
+                                <div class="grade grade4 grades">초기화</div>
+                            </div>
+                        </div>
+                        <div class="deadline">
+                            <div class="heads">
+                                <p>●</p>
+                                <p class="subtitle">설문 마감일을 넣어주세요</p>
+                            </div>
+                            <div class="deadlineBox">
+                                <input
+                                    type="text"
+                                    maxlength="2"
+                                    class="YYInput"
+                                    placeholder="YY"
+                                />
+                                /
+                                <input
+                                    type="text"
+                                    maxlength="2"
+                                    class="MMInput"
+                                    placeholder="MM"
+                                />
+                                /
+                                <input
+                                    type="text"
+                                    maxlength="2"
+                                    class="DDInput"
+                                    placeholder="DD"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="inputBox">
+                        <textarea
+                            class="writeBox"
+                            placeholder="이 칸에 글을 적어주세요"
+                        ></textarea>
+                    </div>
+                </div>
+                <div class="container-submitBTN">작성하기</div>
+            </div>
+        </div>
+    </body>
 </html>

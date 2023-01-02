@@ -6,19 +6,22 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../styles/global.css" />
         <link rel="stylesheet" href="../styles/main.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-        <script src="../scripts/main.js" defer></script>
+        <link rel="stylesheet" href="../styles/Arguement-Detail.css" />
+        <link rel="stylesheet" href="../styles/addform.css" />
+        <link rel="stylesheet" href="../styles/voteResult.css" />
         <link
             rel="shortcut icon"
             type="image/x-icon"
             href="../imgs/Who_Do-Logo.ico"
         />
-        <title>main</title>
         <script
             src="https://kit.fontawesome.com/0d3908869d.js"
             crossorigin="anonymous"
         ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
         <script defer src="../scripts/move.js"></script>
+        <script src="../scripts/write.js" defer></script>
+        <title>VoteResult</title>
     </head>
     <body>
         <nav>
@@ -60,19 +63,37 @@
             </div>
             <div class="container">
                 <div class="top">
-                    <h1 class="container-notice">공지</h1>
-                    <div class="items">
-                        <a href="./AddForm.html">
-                            <div class="addBTN">
-                                <i class="fa-solid fa-plus"></i>
-                            </div>
-                        </a>
-                        <div class="modifyBTN">
-                            <i class="fa-solid fa-pen"></i>
+                    <div
+                        class="grade showGrade"
+                        style="
+                            background-color: #bfdef4;
+                            font-size: 35px;
+                            border-radius: 7px;
+                        "
+                    >
+                        논쟁
+                    </div>
+                    <h1 class="arguement-title"></h1>
+                </div>
+                <div class="contents" id="contents">
+                    <div class="voidResultBox">
+                        <div class="voidResult">
+                            <div class="resultTitle"></div>
+                            <h1 class="result"></h1>
+                        </div>
+                        <div class="voidResult">
+                            <div class="resultTitle"></div>
+                            <h1 class="result"></h1>
                         </div>
                     </div>
                 </div>
-                <div class="contents"></div>
+                <div
+                    id="left"
+                    class="container-submitBTN"
+                    style="background-color: #c2dff4"
+                >
+                    목록으로
+                </div>
             </div>
         </div>
     </body>

@@ -1,0 +1,30 @@
+.arguement-title {
+    margin: 0 0 0 20px;
+    height: 100px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+}
+#vote {
+    color: black;
+    font-size: 33px;
+    cursor: pointer;
+}
+#vote:hover {
+    scale: 1.1;
+    transition: ease-in-out 0.2s;
+    box-shadow: 5px 5px 3px #666;
+}
+.writeBox {
+    background-color: #edeeef;
+    width: 500px;
+}
+.btnBOX {
+    width: 500px;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    right: 250px;
+}
+.Span-0Nwant {
+}
